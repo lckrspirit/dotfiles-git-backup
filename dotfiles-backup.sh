@@ -18,8 +18,9 @@ function pushtoRepo {
     if [[ ${#commitComment} -eq 0 ]]; then
         commitComment="Autobackup configs"
     fi
-
-    
+    git add "$configBackupPath"/*
+    git commit -m "$commitComment"
+    git push -u origin main
 }
 
-copyFiles
+pushtoRepo
