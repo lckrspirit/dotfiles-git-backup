@@ -11,14 +11,14 @@ fi
 
 
 function copyFiles {
-    yes | cp -rfv "$configSourcePath"/* "$configBackupPath"
+    yes | cp -rfv "$configSourcePath"/* "$configBackupPath"/"$device"
 }
 
 function pushtoRepo {
     if [[ ${#commitComment} -eq 0 ]]; then
         commitComment="Autobackup configs"
     fi
-    
+
     
 }
 
