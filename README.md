@@ -8,3 +8,4 @@ My dotfile backups, and shell script for backup config.
     - i3wm main config - `config`
     - i3block bar config - `i3blocks.conf`
 
+And simple script for backup and push data in the repo.
