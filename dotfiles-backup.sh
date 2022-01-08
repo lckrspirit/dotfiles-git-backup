@@ -25,6 +25,7 @@ function pushtoRepo {
 
 function app {
     copyFiles; pushtoRepo
+    send-notify "DotFiles backup" "Task was been completed.!"
 }
 
 app
