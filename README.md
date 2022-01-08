@@ -1,5 +1,5 @@
 # dotfiles-git-backup
-My dotfiles backup, and shell script for backup config's.
+My dotfile backups, and shell script for backup config.
 
 **folders, configs:**
 - ThinkpadT470 - dotfiles, from Thinkpad, 
