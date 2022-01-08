@@ -186,6 +186,20 @@ bar {
   	}
 }
 
+# Shutdown/Restart/Locked menu
+set $Locker i3lock-fancy && sleep 1
+bindsym $mod+Escape mode "$mode_system"
+set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+	bindsym l exec --no-startup-id $Locker, mode "default"
+	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+	bindsym e exec --no-startup-id i3-msg exit, mode "default"
+	bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+	bindsym r exec --no-startup-id systemctl reboot, mode "default"
+	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default" 					bindsym Return mode "default"
+ 	bindsym Escape mode "default"
+}
+
 # apps bindings
 assign [class="Cisco*"] $ws8
 assign [class="Remmina"] $ws9
