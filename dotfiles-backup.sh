@@ -2,7 +2,7 @@
 
 device=$(hostnamectl hostname)
 configSourcePath="$HOME/.config/i3"
-configBackupPath="/mnt/media/scripts/dotfiles-git-backup"
+configBackupPath="/home/an/Git/dotfiles-git-backup"
 commitComment=""
 
 
